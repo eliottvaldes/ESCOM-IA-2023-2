@@ -1,0 +1,31 @@
+Computadoras analógicas: funcionan sin componentes electrónicos(calcauladoras)
+Computadoras digitales: funcionan con componentes electronicos 
+
+- surgimiento de software
+- creacion de estandares
+- implementacion de documentacion necesaria
+- definicion de plantillas
+
+Etapas de sofrware optimizadas:
+- analisis
+- diseño
+- codificacion
+- pruebas
+- mantenimiento
+
+
+Beneficios de el analisis y diseño de sistemas:
+- reduccion de recursos (monetarios, materiales, humanos, tiempo)
+- reduccion de riesgos
+- mayor control y calidad de los sistemas
+
+
+Elementos => 
+Analsiis: Que se va a hacer
+Diseño: Como se va a hacer
+
+caracteristicas del software
+- escalabilidad
+- mantenibilidad
+- desarrollo
+- adaptable
