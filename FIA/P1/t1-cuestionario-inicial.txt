@@ -1,0 +1,28 @@
+﻿1. **¿Qué es inteligencia?**
+La inteligencia es la capacidad de comprender, razonar, aprender, resolver problemas, adaptarse al entorno y tomar decisiones adecuadas. Implica la habilidad de procesar información, aplicar el conocimiento previo y enfrentar situaciones diversas de manera efectiva.
+
+2. **Características y atributos que hacen a un ser inteligente**
+Un ser inteligente suele exhibir atributos como la capacidad de aprendizaje, razonamiento lógico, adaptación al cambio, resolución de problemas, creatividad, toma de decisiones informadas, comprensión del contexto y comunicación efectiva.
+
+3. **¿Cuáles son los tipos de inteligencia?**
+Existen diferentes teorías de inteligencia que sugieren la existencia de varios tipos. Algunos ejemplos son:
+   - Inteligencia emocional: Capacidad para entender y gestionar las emociones propias y ajenas.
+   - Inteligencia lógico-matemática: Habilidad para resolver problemas matemáticos y lógicos.
+   - Inteligencia lingüística: Destreza en el uso del lenguaje, la escritura y la comunicación.
+   - Inteligencia espacial: Habilidad para percibir y manipular objetos en el espacio.
+   - Inteligencia interpersonal: Competencia en entender y relacionarse con otras personas.
+   - Inteligencia intrapersonal: Conciencia y comprensión de los propios sentimientos y pensamientos.
+
+4. **¿Qué es IA?**
+La Inteligencia Artificial (IA) es un campo de la informática que busca desarrollar sistemas y programas capaces de simular procesos cognitivos humanos, como el aprendizaje, la toma de decisiones y el razonamiento, utilizando algoritmos y modelos matemáticos.
+
+5. **¿Cuáles son las áreas de la IA?**
+La IA abarca diversas áreas, algunas de las cuales son:
+   - Aprendizaje automático (Machine Learning): Permite a las máquinas aprender de datos y mejorar su rendimiento en tareas específicas.
+   - Visión por computadora: Capacita a las máquinas para interpretar y comprender imágenes y videos.
+   - Procesamiento de lenguaje natural (NLP): Facilita a las máquinas comprender, interpretar y generar lenguaje humano.
+   - Robótica: Combina la IA con la mecánica para crear sistemas autónomos capaces de interactuar físicamente con el entorno.
+   - Sistemas expertos: Emulan el conocimiento y la toma de decisiones de expertos humanos en un dominio específico.
+   - Redes neuronales y deep learning: Modelan el procesamiento de la información inspirados en la estructura y función del cerebro humano.
+
+
