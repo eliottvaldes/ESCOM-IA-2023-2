@@ -1,0 +1,30 @@
+﻿Década de 1950: Fundamentos Iniciales
+    • 1951: Se desarrolla el UNIVAC I, uno de los primeros equipos comerciales, que incluye un software básico para su operación.
+    • 1956: IBM lanza el primer compilador FORTRAN, marcando el inicio de los lenguajes de programación de alto nivel.
+    • 1958: John McCarthy inventa el lenguaje de programación LISP, un hito en la programación simbólica.
+Década de 1960: Surgimiento de la Ingeniería de Software
+    • 1968: Se acuña el término "ingeniería de software" en la primera conferencia de esta disciplina.
+    • 1969: Se publica el libro "The Mythical Man-Month" de Fred Brooks, enfocándose en la gestión de proyectos de software.
+Década de 1970: Crecimiento y Diversificación
+    • 1970: Edgar Dijkstra introduce la semántica formal en la programación con el concepto de "invariantes".
+    • 1972: Se lanza C, un lenguaje que eventualmente se convertiría en uno de los más influyentes en la historia del desarrollo de software.
+    • 1974: Se presenta el modelo "Cascada" de desarrollo de software, una de las primeras metodologías formales.
+Década de 1980: Métodos Ágiles y Computadoras Personales
+    • 1986: Se publica "Design Patterns: Elements of Reusable Object-Oriented Software" de Gamma, Helm, Johnson y Vlissides, sentando las bases para el uso de patrones de diseño.
+    • 1987: Se propone el modelo "Espiral" de desarrollo de software, destacando la importancia del ciclo de vida iterativo.
+Década de 1990: Auge de la Web y el Software Libre
+    • 1991: Linus Torvalds crea el kernel de Linux, catalizando el movimiento del software de código abierto.
+    • 1995: Se lanza Java, un lenguaje de programación versátil para aplicaciones distribuidas en la web.
+    • 1999: La "Manifesto for Agile Software Development" define los principios fundamentales de la metodología ágil.
+Década de 2000: Transformación Digital y Nuevas Metodologías
+    • 2001: Se presenta el Manifiesto Ágil, resaltando la agilidad sobre los procesos pesados.
+    • 2007: Apple lanza el iPhone, impulsando la creación de aplicaciones móviles y el enfoque en la experiencia del usuario.
+    • 2009: Aparece DevOps como respuesta a la necesidad de integración continua y entrega rápida.
+Década de 2010: Cloud Computing y Machine Learning
+    • 2011: Se popularizan los servicios en la nube, permitiendo el despliegue y escalabilidad eficiente de aplicaciones.
+    • 2016: Google's AlphaGo demuestra el potencial del machine learning al vencer al campeón mundial en el juego de Go.
+    • 2019: La automatización y la inteligencia artificial se integran más en los procesos de desarrollo.
+Década de 2020: Enfoque en la Ética y la Sostenibilidad
+    • 2020: Mayor enfoque en la ética en el desarrollo de software, abordando problemas como la privacidad y el sesgo algorítmico.
+    • 2023: La sostenibilidad y la programación verde ganan importancia, impulsando la optimización de recursos en el desarrollo de software.
+
