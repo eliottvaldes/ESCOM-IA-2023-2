@@ -1,0 +1,54 @@
+ciclo de vida es un marco comun para trabajar en el desarrollo de un sistema infomratico 
+- tener una idea de los distintos pasos o procesos para teener el producto final
+
+NORMA ISO 12207 : AÑO 2017
+REQUERIMIENTOS: son las necesidades de los usuarios que le san utilidad al sistema
+
+PLANIFICACION:  
+- que voy a solucionar
+- como lo voy a hacer
+- que voy a hacer
+- tiempo
+- investigacion
+- gestion de recursos 
+
+- PASO INTERMEDIO:
+toma de requerimientos => 
+- preguntar al usuario que es lo que necesita las veces que sea necesarias
+
+REQUERIMIENTOS y ANALISIS:
+- comprension de requerimientos
+- caracteristicas que va a tener el sistema
+
+DISEÑO:
+- como voy a hacer el sistema
+- se utilizan diagramas como el caso de uso:
+    - este diagrama nos ayuda a descubrir nuevos requerimientos y a entender mejor el sistema.
+    - se colocan los agentes que van a usar el sistema y las acciones que van a realizar
+- que se necesita para hacer el sistema: tecnologias, lenguajes, etc
+
+IMPLEMENTACION:
+- desarrollo del codigo del sistema
+
+PRUEBAS:
+- se realizan pruebas para ver si el sistema funciona correctamente
+- va coorrelacionado con el diseño y la implementacion
+
+DESPLIEGUE:
+- se despliega el sistema en el ambiente de produccion
+
+OPERACION Y MANTENIMIENTO:
+- dar mantenimiento para los nuevso reqeurimientos  y nuevas funcionalidades
+- utiliza todas las etapas del ciclo de vida
+
+RETROALIMENTACION Y RREMPLAZO
+
+
+----------------------------------------
+El desarrollo de software implica la identificacion de riesgos que pueden aparecer a lo largo del proyecto.
+- riesgos: son eventos que pueden ocurrir y afectar el desarrollo del proyecto
+Se pueden mitigar esos riesgos con las CONTINGENCIAS
+- contingencias: son planes de accion que se toman en caso de que ocurra un riesgo
+
+
+
