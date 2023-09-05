@@ -1,0 +1,22 @@
+HERRAMIENTAS QUE SE PUEDEN OCUPAR PARA CADA UNA DE LAS ETAPAS DE CICLO DE VIDA
+
+PLANIFICACION:
+- zoom 
+- meet
+- jira
+- asana
+- docs
+
+DISEÑO:
+- herramientas de diagramas
+- drawio
+
+IMPLEMENTACION:
+- gitlab
+- cloud
+- github
+
+
+PRUEBAS:
+- herramientas automatizadas de registro de logs: Datadog
+- herramientas para medir el rendimiento de un sistema de manera automatizada
