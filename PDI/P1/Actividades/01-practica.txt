@@ -1,0 +1,26 @@
+practica 1
+
+punto matriz = 
+[
+color rojo
+verde azul
+]
+
+punto division columnas
+[
+    rojo verde azul
+]
+
+punto division filas
+[
+    rojo
+    verde
+    azul
+]
+
+punto division columnas y filas
+[
+    rojo negro  verde
+    rojo blanco verde
+    rojo negro  verde    
+]
