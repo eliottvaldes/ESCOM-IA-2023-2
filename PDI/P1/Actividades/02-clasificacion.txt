@@ -1,0 +1,5 @@
+Crear un programa que:
+calcule n clases con n representantes por clases
+
+si el usuario dice 4 clases y 5  representantes
+pedir al usuario caclcule 
