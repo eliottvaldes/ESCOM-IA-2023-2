@@ -21,6 +21,6 @@ punto division filas
 punto division columnas y filas
 [
     rojo negro  verde
-    rojo blanco verde
+    rojo azul verde
     rojo negro  verde    
 ]
