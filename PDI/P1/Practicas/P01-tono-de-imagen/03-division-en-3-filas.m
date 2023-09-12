@@ -1,3 +1,13 @@
+
+%{
+THIS FILE IS A PART OF THE PROJECT "DIGITAL IMAGE PROCESSING"
+
+This file takes an image and separate it into 3 parts using the rows
+and show the image with the red, green and blue components using a subplot
+
+Author: Eliot Valdés
+%}
+
 clc
 warning off all
 

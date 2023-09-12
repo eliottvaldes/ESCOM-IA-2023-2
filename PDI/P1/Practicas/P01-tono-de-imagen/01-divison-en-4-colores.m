@@ -1,3 +1,16 @@
+
+%{
+THIS FILE IS A PART OF THE PROJECT "DIGITAL IMAGE PROCESSING"
+
+This file takes a color image and separates it in 4 images, each one
+containing only one of the color components of the original image.
+The 4 images are modified to show only one color component.
+Finally, the 4 images are shown in a subplot.
+
+
+Author: Eliot Valdés
+%}
+
 clc
 warning off all
 
