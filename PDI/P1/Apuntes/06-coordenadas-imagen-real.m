@@ -81,11 +81,11 @@ legend('sky', 'ocean', 'rock', 'point to match')
 
 % define the mean of each class
 % mean of the class 'sky'
-m1 = mean(z1);
+m1 = mean(z1, 2);
 % mean of the class 'ocean'
-m2 = mean(z2);
+m2 = mean(z2, 2);
 % mean of the class 'rock'
-m3 = mean(z3);
+m3 = mean(z3, 2);
 
 % get the distance between the point to match and the mean of each class using norm
 % distance between the point to match and the mean of the class 'sky'
