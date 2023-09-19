@@ -12,58 +12,67 @@ n_clases = input('Ingrese el número de clases a identificar en la imagen: ');
 iter = input('Ingrese el número de iteraciones para cada clase: ');
 
 % Pedir el nombre de cada clase
-name = cell(1, n_clases);
+class_names = cell(1, n_clases);
 for i = 1:n_clases
-    name{i} = input(['Ingrese el nombre de la clase ', num2str(i), ': '], 's');
+    class_names{i} = input(['Ingrese el nombre de la clase ', num2str(i), ': '], 's');
 end
 
-% Inicializar una celda para almacenar las iteraciones de cada clase
-class_iterations = cell(1, n_clases);
+% Inicializar una celda para almacenar los valores de píxeles de cada clase
+class_pixels = cell(1, n_clases);
 
-% Mostrar la imagen y permitir al usuario seleccionar puntos para cada clase
+% Capturar los valores de píxeles para cada clase
 for i = 1:n_clases
-    figure('Name', ['Seleccionar puntos para la clase ', name{i}], 'NumberTitle', 'off');
+    % Mostrar la imagen y permitir al usuario seleccionar puntos para la clase
+    figure('Name', ['Seleccionar puntos para la clase ', class_names{i}], 'NumberTitle', 'off');
     imshow(a);
-    title(['Clase: ', name{i}]);
-    hold on;
+    title(['Seleccionar puntos para la clase ', class_names{i}]);
+    
+    % Inicializar una matriz para almacenar los valores de píxeles de la clase actual
+    class_pixels{i} = zeros(iter, 3); % RGB tiene 3 canales
+    
     for j = 1:iter
-        disp(['Seleccione el punto ', num2str(j), ' para la clase ', name{i}]);
-        [x, y] = ginput(1);
-        class_iterations{i}{j} = [x, y];
-        text(x, y, num2str(j), 'Color', 'r', 'FontSize', 12);
+        % Usar impixel para obtener el valor de píxel
+        [x, y] = ginput(1); % Obtener una coordenada del usuario
+        pixel_value = impixel(a, x, y); % Obtener el valor de píxel en esa coordenada
+        
+        % Guardar el valor de píxel en la matriz
+        class_pixels{i}(j, :) = pixel_value;
     end
-    hold off;
+    
+    % Cerrar la figura actual
     close;
 end
 
 % Calcular el promedio de cada clase
 class_means = cell(1, n_clases);
 for i = 1:n_clases
-    class_means{i} = mean(cell2mat(class_iterations{i}));
+    class_means{i} = mean(class_pixels{i});
 end
 
 while true
     % Solicitar al usuario que seleccione un punto 'pointxy' dentro de la imagen
-    figure('Name', 'Seleccionar un punto', 'NumberTitle', 'off');
+    figure('Name', 'Seleccionar punto en la imagen', 'NumberTitle', 'off');
     imshow(a);
-    title('Seleccione un punto');
-    [x, y] = ginput(1);
-    pointxy = [x, y];
-    close;
-
-    % Calcular la distancia del punto 'pointxy' a cada uno de los promedios de las clases
+    title('Seleccionar un punto en la imagen');
+    
+    [x, y] = ginput(1); % Obtener una coordenada del usuario
+    
+    % Obtener la distancia del punto 'pointxy' a cada uno de los promedios de las clases
     distances = zeros(1, n_clases);
     for i = 1:n_clases
-        distances(i) = norm(pointxy - class_means{i});
+        distances(i) = norm(double(impixel(a, x, y)) - class_means{i});
     end
-
-    % Obtener la clase a la que pertenece el punto 'pointxy' utilizando una estructura 'if'
-    [~, min_index] = min(distances);
-    disp(['El punto pertenece a la clase: ', name{min_index}]);
-
-    % Preguntar al usuario si desea seleccionar otro punto en la imagen
-    choice = input('¿Desea seleccionar otro punto? (Sí: 1, No: 0): ');
+    
+    % Obtener la clase a la que pertenece el punto 'pointxy' usando una estructura 'if'
+    [~, class_index] = min(distances);
+    
+    % Mostrar la clase a la que pertenece el punto
+    disp(['El punto seleccionado pertenece a la clase: ', class_names{class_index}]);
+    
+    % Preguntar al usuario si desea seleccionar otro punto
+    choice = input('¿Desea seleccionar otro punto? (Sí=1, No=0): ');
+    
     if choice == 0
-        break;
+        break; % Salir del bucle si el usuario no desea seleccionar otro punto
     end
 end
