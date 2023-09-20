@@ -1,0 +1,57 @@
+Se basan en el desarrollo del sistema a partir del analisis del mismo
+Tenemos una metodologia base donde se desglozan todas las demas
+
+MODELO EN CASCADA / SECUENCIAL:
+Se crea un diagrama de cascada donde se parte colocando las tareas
+contamos con:
+analisis requerimientos y sistema
+diseño preeliminar, diseño detallado
+codificacion y pruebas unitarias
+implementacion
+
+Se puede dividir en dos apartados:
+- la que tiene retroaliamentacion y la que no
+ se corre el riesgo de arrastar posibles errores al no analizar correctamente
+
+- la que tiene retroaliamentacion:
+si cuento con un error regreso al analisis de requisitos para solucionar el error encontrado
+
+VARIACION DEL MODELO EN CASCADA 1:
+definicion de requisitos
+diseño del sistema
+implementacion y pruebas unitarias
+integracion y pruebas de sistema
+
+VARIACION DE MODELO DE CASCADA (METODOLOGIA EN V):
+implica que al tener las etapas se van a abordar en descenso pero se pueden comunicar las etapas y se pueden regresar a etapas anteriores
+
+
+METODOLOGIA INCREMENTAL:
+analsiis
+diseño de sistema  ->  se genera una caja dentro de la cual se va a trabajar
+                - analisis, diseño y pruebas
+
+
+///////////////////
+METODOLOGIA DRA:
+- requisitos cambiantes
+- limita tiempo de 60-90 dias
+- puede regresar a tapas anteriores sin la necesidad de terminar la etapa actual    
+
+///////////////////
+METODOLOGIA DE PROTOTIPOS:
+- es muy necesario definir bien desde el inicio
+- equipo de desarrollo centrado en el objetivo
+- definir que seccion del prototipo se va a entregar
+- lo ideal son 5 prototipos
+- el ultimo debe de ser el producto final ya funcional 
+- metodologia bombero (Espiral) es la que se utiliza cuando falla el prototipo
+
+
+
+METODOLOGIA ESPIRAL:
+- implica que cada espiral conlleva un costo y entre mas espirales es más pesado en coste operacional y desarrollo
+- maximo 3-4 espirales
+
+Eta de determinar
+- objetivos, requisitos, alternativas y restrcciones
