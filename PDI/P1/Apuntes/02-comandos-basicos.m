@@ -16,7 +16,7 @@ WHOS % muestra las variables que hay en memoria
 % LECTURA DE PRIMRA IMAGEN
 
 % lectura de la imagen
-a = imread('ejemplo.png'); % lee la imagen y la guarda en la variable a
+a = imread('ejemplo.png') % lee la imagen y la guarda en la variable a
 figure(1) % crea una ventana
 imshow(a) % muestra la imagen en la ventana
 title('imagen original') % pone un titulo a la ventana
