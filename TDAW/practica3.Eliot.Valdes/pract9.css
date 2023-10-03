@@ -1,0 +1,9 @@
+p {
+    border: 2px solid powderblue;
+    margin: 50px;
+}
+
+/* cambiar color a todas las etiquetas a */
+a {
+    color: red;
+}
