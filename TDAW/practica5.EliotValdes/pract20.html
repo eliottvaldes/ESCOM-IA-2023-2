@@ -1,0 +1,38 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const validateFruit = () => {
+            const x = document.getElementById("mySelect").selectedOptions[0].value;
+            // validate if the user selected "Platano" inner 'Hola', if its "Manzana" inner 'Bienvenido'
+            const message = x == "Platano" ? "Hola" : "Bienvenido";
+
+            alert(`La fruta seleccionada es: ${x} y el mensaje es: ${message}`);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <select id="mySelect">
+            <option>Platano</option>
+            <option>Manzana</option>
+        </select>
+        <br><br>
+        <input type="button" onclick="validateFruit();" value="Mostar Resultado">
+    </form>
+</body>
+
+</html>
+<!-- 
+     Realizado por VLEF
+  -->

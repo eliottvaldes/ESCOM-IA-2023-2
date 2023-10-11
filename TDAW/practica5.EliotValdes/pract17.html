@@ -1,0 +1,37 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        const x = 10;
+        const y = 20;
+        const showValues = () => {
+            document.getElementById("showData").innerHTML = "x = " + x + " and y = " + y;
+        }
+        const myFunction = () => {
+            let z;
+            z = x + y;
+            alert(`EL resultado de la suma de ${x} + ${y} es: ${z}`)
+        }
+    </script>
+
+</head>
+
+<body onload="showValues()">
+    <button onclick="myFunction()">Try it</button>
+    <p id="showData"></p>
+</body>
+
+</html>
+<!-- 
+    Realizado por VLEF
+ -->

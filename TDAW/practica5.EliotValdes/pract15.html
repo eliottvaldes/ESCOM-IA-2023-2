@@ -1,0 +1,36 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function isKeyPressed(event) {
+            var text = "The shift key was NOT pressed!";
+            if (event.shiftKey == 1) {
+                text = "The shift key was pressed!";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
+
+</head>
+
+<body onmousedown="isKeyPressed(event)">
+    <p>
+        Click on this paragraph. An alert box wll tell you if you pressed the shift key or not.
+    </p>
+    <p id="demo"></p>
+</body>
+
+</html>
+<!-- 
+    Realizado por VLEF
+ -->

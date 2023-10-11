@@ -1,0 +1,44 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <form id="frm1" action="/action_page.php">
+        First Name: <input type="text" name="fname" id="fname" value="Donald"><br>
+        Last Name: <input type="text" name="lname" id="lname" value="Duck"><br>
+        <input type="submit" name="" id="Submit">
+    </form>
+
+    <p>
+        Click the "Try it" button to display the number of elements in the form.
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("frm1").length;
+            document.getElementById("demo").innerHTML = x;             
+        }
+    </script>
+
+</body>
+
+</html>
+<!-- 
+    Realizado por VLEF
+ -->

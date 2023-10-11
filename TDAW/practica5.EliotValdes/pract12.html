@@ -1,0 +1,41 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myFunction(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            var coor = "Coordinates: (" + x + "," + y + ")";
+            document.getElementById("demo").innerHTML = coor;
+        }
+
+        function clearCoor() {
+            document.getElementById("demo").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body style="margin:0px;">
+    <div id="coordiv" style="width: 199px;height: 99px; border: 1px solid;" onmousemove="myFunction(event);"
+        onmouseout="clearCoor();">
+    </div>
+    <p>
+        Mouse over the rectangle above, and get the coordinates of your mouse pointer.
+    </p>
+    <p id="demo"></p>
+</body>
+
+</html>
+<!-- 
+    Realizado por VLEF
+ -->

@@ -1,0 +1,39 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function removeOption() {
+            var x = document.getElementById("mySelect");
+            x.remove(x.selectedIndex);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        Select your favorite fruit:
+        <select id="mySelect">
+            <option>Apple</option>
+            <option>Pear</option>
+            <option>Banana</option>
+            <option>Orange</option>
+        </select>
+        <br><br>
+        <input type="button" onclick="removeOption();" value="Remove the selected option">
+    </form>
+</body>
+
+</html>
+<!-- 
+     Realizado por VLEF
+  -->

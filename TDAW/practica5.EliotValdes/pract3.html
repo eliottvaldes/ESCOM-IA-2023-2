@@ -1,0 +1,39 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 10/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>
+        click to open a new window and add some content
+    </p>
+    <button onclick="myFunction()">
+        Try it!
+    </button>
+
+    <script>
+        function myFunction() {
+            var w = window.open();
+            w.document.open();
+            w.document.write("<h2>hello world!</h2>");
+            w.document.close();
+        }
+    </script>
+
+
+</body>
+
+</html>
+<!-- 
+    Realizado por VLEF
+ -->
