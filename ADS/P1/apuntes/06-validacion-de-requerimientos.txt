@@ -1,0 +1,25 @@
+Para validar un requerimiento se debe tomar en cuenta lo siguiente:
+- estar bien expresado
+- tener un antecedente de implementacion de la funcionalidad en otros sistemas
+- comprobar si esta relacionado con todo el sistema
+- compribar requerimientos con otros requerimientos
+- ser medibele y alcanzable 
+- ser verificable
+- generar pruebas -> deben de  tener fin
+- debe ser aceptado
+    -> aceptacion a nivel interno con el equipo de trabajo : funcionalidad que cumple con la funcionalidad del sistemax
+    -> aceptacion a nivel externo con el cliente
+
+
+Para analizarlo se debe: 
+- analizar el requerimiento
+
+
+Para verificar al requerimiento se debe:
+- considerar si es valido o consistente o no
+
+INGENIERIA DE LOS REQUERIMIENTOS:
+1.- Comprender el problema
+2.- Requerimientos iniciales
+-> se encuentran dentro de los misma proboematica 
+3.- Comprobacion del requerimiento
