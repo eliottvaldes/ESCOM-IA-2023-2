@@ -2,6 +2,8 @@ clc
 close all
 warning off all
 
+%%authors: Ethel Padilla y Eliot Valdés
+
 % Leer la imagen 'peppers.png'
 a = imread('peppers.png');
 
