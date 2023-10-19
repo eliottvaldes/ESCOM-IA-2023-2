@@ -33,65 +33,36 @@ i=2;
 
 while(i <= m)
     while(j <= n)
-
-    
     
     if(j == n && i == m)
-
         P(i,j) = round((B(i,j-1)+B(i-1,j-1)+B(i-1,j))/3);
-
         C(i,j) = P(i,j);
-
     elseif(j == n)
-
         P(i,j) = round((B(i+1,j-1)+B(i,j-1)+B(i-1,j-1)+B(i-1,j))/4);
-
         P(i+1,j) = round((B(i,j)+B(i,j-1)+B(i+1,j-1))/3);
-
         C(i,j) = P(i,j);
-
         C(i+1,j) = P(i+1,j);
-
     elseif(i == m)
-
         P(i,j) = round((B(i-1,j-1)+B(i,j-1)+B(i-1,j)+B(i-1,j+1))/4);
-    
         P(i,j+1) = round((B(i,j)+B(i-1,j)+B(i-1,j+1))/3);
-
         C(i,j) = P(i,j);
-
         C(i,j+1) = P(i,j+1);
-
     else
-
         P(i,j) = round((B(i-1,j-1)+B(i,j-1)+B(i+1,j-1)+B(i-1,j)+B(i-1,j+1))/5);
-    
         P(i,j+1) = round((B(i,j)+B(i-1,j)+B(i-1,j+1))/3);
-
         P(i+1,j) = round((B(i+1,j-1)+B(i,j-1)+B(i,j)+B(i,j+1))/4);
-
         P(i+1,j+1) = round((B(i,j)+B(i,j+1)+B(i+1,j))/3);
-
         C(i,j) = P(i,j);
-
         C(i,j+1) = P(i,j+1);
-
         C(i+1,j) = P(i+1,j);
-
         C(i+1,j+1) = P(i+1,j+1);
-
     end
     j=j+2;
-
-    
     end
-    
-    i=i+2;
 
+    i=i+2;
     j= 2;
 end
-
-
 
 
 %Creacion la matriz de Error
@@ -100,8 +71,6 @@ Eshow = zeros(m,n);
 Eshow = double(Eshow);
 
 %Error
-%Error
-
     for i=1:m
         for j=1:n
             Error = ( double(B(i,j)) - double(P(i,j)));
@@ -111,8 +80,6 @@ Eshow = double(Eshow);
     end
 
 Eshow = uint8(Eshow);
-
-
 
 Nbit = input('A cuantos bits desea comprimir (1-8): ');
 sizet = pow2(Nbit);
@@ -145,8 +112,6 @@ for rec = 1:sizet
         suma(1,1) = suma(1,1) + delta(1,1);
         Tbit(2,rec,1) = suma(1,1);
 end
-
-
     for i=1:m
         for j=1:n
             muestraerror = double(E(i,j));
@@ -166,7 +131,6 @@ EQ1 = zeros(m,n);
 EQ1 = double(EQ1);
 
 %Proceso de [MEQ]^-1
-
     for i=1:m
         for j=1:n
             valormuestra = double(EQ(i,j)) + 1;
@@ -188,19 +152,14 @@ imshow(R)
 title('Recuperada')
 
 Arriba = double(Z);
-Arriba = Arriba^2;
 
 Abajo = (double(Z)-double(R));
-Abajo = Abajo^2;
 
-Arall = sum(Arriba,'all');
 
-Aball = sum(Abajo,'all');
+% Calcular la relación señal-ruido (SNR)
+signal_power = sum(double(Z(:)).^2); % Potencia de la señal (imagen original)
+noise_power = sum(double(Abajo(:)));  % Potencia del ruido (diferencia entre Z y R)
 
-Dentro=(Arall/Aball);
+SNR = 10 * log10(signal_power / noise_power);
 
-casiF = log10(Dentro);
-
-final = 10*casiF;
-
-disp(final-25);
+fprintf('Relación Señal-Ruido (S/N): %.6f dB\n', SNR);
