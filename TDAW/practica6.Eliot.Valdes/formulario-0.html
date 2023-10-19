@@ -1,0 +1,49 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 18/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validar() {
+            if (document.getElementById("fname").value == "") {
+                alert("Ingrese nombre");
+                return false;
+            }
+            if (document.getElementById("lname").value == "") {
+                alert("Ingrese apellido");
+                return false;
+            } else {
+                alert("Todo lleno");
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+
+    <form action="./action_page.php">
+        <label for="fname">Nombre:</label><br>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="lname">Apellido:</label><br>
+        <input type="text" id="lname" name="lname" value=""><br><br>
+
+        <button type="button" onclick="validar()">
+            Submit
+        </button>
+
+    </form>
+
+</body>
+
+</html>
+<!-- Realizado por VLEF -->

@@ -1,0 +1,190 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 18/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <!-- styles -->
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 30%;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 1rem;
+            background-color: blueviolet;
+            color: white;
+        }
+
+        form h2 {
+            text-align: center;
+            color: blueviolet;
+            font-size: 2rem;
+        }
+
+        form #header p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form input {
+            margin-bottom: 10px;
+            padding: 5px;
+            margin-bottom: 20px;
+            width: 100%;
+            border: 1px solid blueviolet;
+            border-radius: 0.3rem;
+        }
+
+        form span {
+            color: red;
+        }
+
+        form textarea {
+            border-color: blueviolet;
+            margin-bottom: 20px;
+            border-radius: 0.3rem;
+        }
+
+        form button {
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #4b177c;
+        }
+    </style>
+
+    <!-- script -->
+    <script>
+
+        const validateForm = () => {
+            const name = document.getElementById("uname").value;
+            const email = document.getElementById("uemail").value;
+            const phone = document.getElementById("uphone").value;
+            const website = document.getElementById("uwebsite").value;
+            const asunto = document.getElementById("uasunto").value;
+            const message = document.getElementById("umessage").value;
+
+            if (!name) {
+                alert("Ingrese nombre");
+                return false;
+            }
+            if (!email) {
+                alert("Ingrese email");
+                return false;
+            }
+            if (!phone) {
+                alert("Ingrese teléfono");
+                return false;
+            }
+            if (!website) {
+                alert("Ingrese sitio web");
+                return false;
+            }
+            if (!asunto) {
+                alert("Ingrese asunto");
+                return false;
+            }
+            if (!message) {
+                alert("Ingrese mensaje");
+                return false;
+            }
+
+            alert("Todo lleno");
+            return true;
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <div>
+
+        <form>
+
+            <div id="header">
+                <h2>
+                    Formulario de contacto
+                </h2>
+
+                <p>
+                    Escríbenos y en breve nos pondremos en contacto contigo
+                </p>
+            </div>
+
+
+            <label for="uname">
+                Nombre: <span>*</span>
+            </label>
+            <input type="text" id="uname" name="uname" value="">
+
+            <label for="uemail">
+                Email: <span>*</span>
+            </label>
+            <input type="email" id="uemail" name="uemail" value="">
+
+            <!-- phone -->
+            <label for="uphone">
+                Teléfono: <span>*</span>
+            </label>
+            <input type="tel" id="uphone" name="uphone" value="">
+
+            <!-- website -->
+            <label for="uwebsite">
+                Sitio web:
+            </label>
+            <input type="url" id="uwebsite" name="uwebsite" value="">
+
+            <!-- Asunto -->
+            <label for="uasunto">
+                Asunto: <span>*</span>
+            </label>
+            <input type="text" id="uasunto" name="uasunto" value="">
+
+            <!-- message -->
+            <label for="umessage">
+                Mensaje: <span>*</span>
+            </label>
+            <textarea id="umessage" name="umessage" rows="4" cols="50"
+                placeholder="Deja aquí tu comentario..."></textarea><br>
+
+
+            <button type="button" onclick="validateForm()">
+                ENVIAR
+            </button>
+
+            <p>
+                <span>*</span> los campos son obligatorios
+            </p>
+
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>
+<!-- Realizado por VLEF -->

@@ -1,0 +1,459 @@
+<!-- 
+    Alumno: Valdés Luis Eliot Fabián
+    Grupo: 4BV1
+    Fecha: 18/10/2023    
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- styles -->
+    <style>
+        body {
+            background-color: rgb(165, 209, 226);
+        }
+
+        form {
+            margin: 0 auto;
+            width: 50%;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0.4rem;
+        }
+
+        table thead {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        #blue-container {
+            background-color: rgb(165, 209, 226);
+        }
+
+        #main-header {
+            width: 100%;
+            text-align: center;
+            color: red;
+            margin-bottom: 30px;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        #section {
+            width: 100%;
+            padding: 5px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 98%;
+        }
+
+        form input[type="checkbox"] {
+            width: 15%;
+        }
+
+        table,
+        th,
+        td {
+            border: 2px solid rgb(165, 209, 226);
+        }
+
+        form button {
+            margin-top: 20px;
+            width: 100%;
+            padding: 10px;
+            border-radius: 1rem;
+            background-color: rgb(165, 209, 226);
+        }
+
+        form button:hover {
+            background-color: rgb(69, 105, 119);
+            cursor: pointer;
+        }
+    </style>
+    <!-- script -->
+    <script>
+        const validateForm = () => {
+            const ffname = document.getElementById("fname").value;
+            const flname = document.getElementById("lname").value;
+            const faddress = document.getElementById("address").value;
+            const fphone = document.getElementById("phone").value;
+            const femail = document.getElementById("email").value;
+            const fdocument = document.getElementById("document").value;
+            const fbirth = document.getElementById("birth").value;
+            const fcourse = document.getElementById("course").value;
+            const fcourseHour = document.getElementById("course-hour").value;
+            const fmonday = document.getElementById("monday").value;
+            const ftuesday = document.getElementById("tuesday").value;
+            const fwednesday = document.getElementById("wednesday").value;
+            const fthursday = document.getElementById("thursday").value;
+            const fpayment = document.getElementById("payment").value;
+            const fcontrato = document.getElementById("contrato").value;
+            const fatendio = document.getElementById("atendio").value;
+            const finscripcion = document.getElementById("inscripcion").value;
+
+            // validate name using regex
+            const regexName = /^[a-zA-Z ]{2,30}$/;
+            if (!regexName.test(ffname)) {
+                alert("El campo nombre no es válido");
+                return false;
+            }
+
+            // validate lastname using regex
+            if (!regexName.test(flname)) {
+                alert("El campo apellido no es válido");
+                return false;
+            }
+
+            // validate address using regex
+            const regexAddress = /^[a-zA-Z0-9 ]{2,30}$/;
+            if (!regexAddress.test(faddress)) {
+                alert("El campo dirección no es válido");
+                return false;
+            }
+
+            // validate phone using regex
+            const regexPhone = /^[0-9]{7,10}$/;
+            if (!regexPhone.test(fphone)) {
+                alert("El campo teléfono no es válido");
+                return false;
+            }
+
+            // validate email using regex
+            const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+            if (!regexEmail.test(femail)) {
+                alert("El campo email no es válido");
+                return false;
+            }
+
+            // validate document using regex
+            const regexDocument = /^[0-9]{7,10}$/;
+            if (!regexDocument.test(fdocument)) {
+                alert("El campo documento no es válido");
+                return false;
+            }
+
+            // validate birth using regex
+            const regexBirth = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+            if (!regexBirth.test(fbirth)) {
+                alert("El campo fecha de nacimiento no es válido");
+                return false;
+            }
+
+            // validate contrato using regex
+            const regexContrato = /^[0-9]{7,10}$/;
+            if (!regexContrato.test(fcontrato)) {
+                alert("El campo contrato no es válido");
+                return false;
+            }
+
+            // validate atendio using regex
+            if (!regexName.test(fatendio)) {
+                alert("El campo persona que atendió no es válido");
+                return false;
+            }
+
+            // validate inscripcion using regex
+            const regexInscripcion = /^[0-9]{4}-[0-9]{2}-[0-9]{2}$/;
+            if (!regexInscripcion.test(finscripcion)) {
+                alert("El campo fecha de inscripción no es válido");
+                return false;
+            }
+
+            // validate course using regex
+            if (!fcourse) {
+                alert("El campo curso no es válido");
+                return false;
+            }
+
+            // validate course-hour using regex
+            // define regex
+            const regexCourseHour = /^[0-9]{2}:[0-9]{2}$/;
+            if (!regexCourseHour.test(fcourseHour)) {
+                alert("El campo horario no es válido");
+                return false;
+            }
+
+            // validate monday using regex
+            if (!fmonday) {
+                alert("El campo lunes no es válido");
+                return false;
+            }
+
+            // validate tuesday using regex
+            if (!ftuesday) {
+                alert("El campo martes no es válido");
+                return false;
+            }
+
+            // validate wednesday using regex
+            if (!fwednesday) {
+                alert("El campo miércoles no es válido");
+                return false;
+            }
+
+            // validate thursday using regex
+            if (!fthursday) {
+                alert("El campo jueves no es válido");
+                return false;
+            }
+
+            // validate payment using regex
+            if (!fpayment) {
+                alert("El campo plan de pago no es válido");
+                return false;
+            }
+
+            // validate register date
+            if (!finscripcion) {
+                alert("El campo fecha de inscripción no es válido");
+                return false;
+            }
+
+            alert("Todo lleno");
+            return true;
+
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+    <form>
+        <table>
+            <tr>
+                <td id="main-header" colspan="6">
+                    FORMULARIO DE INSCRIPCIÓN
+                </td>
+            </tr>
+            <tbody>
+                <!-- DATOS PERSONALES -->
+                <tr>
+                    <td id="section" colspan="6">
+                        DATOS PERSONALES
+                    </td>
+                </tr>
+                <!-- 7 rows with 2 cols each one -->
+                <!-- name -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="fname">Nombre:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="fname" name="fname" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- lastname -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="lname">Apellido:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="lname" name="lname" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- address -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="address">Dirección:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="address" name="address" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- Phone -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="phone">Teléfono:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="phone" name="phone" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- email -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="email">Correo electrónico:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="email" name="email" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- Documento -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="document">Documento:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="document" name="document" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- birth -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="birth">Fecha de nacimiento:</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="date" id="birth" name="birth" value="2009-03-30"
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+
+                <!-- CAPACITACIÓN -->
+                <tr>
+                    <td id="section" colspan="6">
+                        CAPACITACIÓN
+                    </td>
+                </tr>
+                <!-- CURSO -->
+                <tr>
+                    <td id="blue-container" colspan="1">
+                        <label for="course">Curso:</label>
+                    </td>
+
+                    <td colspan="1">
+                        <select name="course" id="course">
+                            <option disabled selected value> Elija un curso </option>
+                            <option value="1">Curso 1</option>
+                            <option value="2">Curso 2</option>
+                            <option value="3">Curso 3</option>
+                            <option value="4">Curso 4</option>
+                        </select>
+                    </td>
+                    <td colspan="4">
+                        Días
+                    </td>
+                </tr>
+                <!-- HORARIO -->
+                <tr>
+                    <td id="blue-container" colspan="1">
+                        <label for="course-hour">Horario:</label>
+                    </td>
+
+                    <td colspan="1">
+                        <select name="course-hour" id="course-hour">
+                            <option disabled selected value> Elija un horario </option>
+                            <option value="1">Curso 1</option>
+                            <option value="2">Curso 2</option>
+                            <option value="3">Curso 3</option>
+                            <option value="4">Curso 4</option>
+                        </select>
+                    </td>
+                    <!-- checkbox lunes -->
+                    <td colspan="1">
+                        <input type="checkbox" id="monday" name="monday" value="monday">
+                        <label for="monday">Lunes</label><br>
+                    </td>
+                    <!-- checkbox martes -->
+                    <td colspan="1">
+                        <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+                        <label for="tuesday">Martes</label><br>
+                    </td>
+                    <!-- checkbox miercoles -->
+                    <td colspan="1">
+                        <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+                        <label for="wednesday">Miércoles</label><br>
+                    </td>
+                    <!-- checkbox jueves -->
+                    <td colspan="1">
+                        <input type="checkbox" id="thursday" name="thursday" value="thursday">
+                        <label for="thursday">Jueves</label><br>
+                    </td>
+                </tr>
+                <!-- CAPACITACIÓN -->
+                <tr>
+                    <td id="section" colspan="6" style="text-align: start;" style="text-align: left; float: left;">
+                        <input type="checkbox" name="" id="" style="float: left;"> PLAN DE PAGO
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" name="payment" id="payment" value="contado">
+                    </td>
+                    <td id="blue-container" colspan="1">
+                        Contado
+                    </td>
+                    <td colspan="4">
+                        Modena
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="radio" name="payment" id="payment" value="credito">
+                    </td>
+                    <td id="blue-container" colspan="1">
+                        Credito
+                    </td>
+                    <td colspan="4">
+                        Tarjeta
+                    </td>
+                </tr>
+                <!-- DATOS DE LA INSTITUCIÓN -->
+                <tr>
+                    <td id="section" colspan="6">
+                        DATOS DE LA INSTITUCIÓN
+                    </td>
+                </tr>
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="contrato">N° de contrato</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="contrato" name="contrato" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- persona que atendio -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="atendio">Persona que atendió</label>
+                    </td>
+                    <td colspan="4">
+                        <input type="text" id="atendio" name="atendio" value=""
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+                <!-- fecha de inscripcion -->
+                <tr>
+                    <td id="blue-container" colspan="2">
+                        <label for="inscripcion">Fecha de inscripción</label>
+                    </td>
+                    <td colspan="4">
+                        <!-- date deafult 15/02/2009 -->
+                        <input type="date" id="inscripcion" name="inscripcion" value="2009-03-15"
+                            placeholder="Haga click aquí para escibir el texto">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <button type="button" onclick="validateForm()">
+            ENVIAR
+        </button>
+
+
+    </form>
+</body>
+
+</html>
+<!-- Realizado por VLEF -->
