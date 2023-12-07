@@ -5,19 +5,10 @@ from scipy.stats import norm
 from scipy.integrate import quad
 
 # Solicitar al usuario los parámetros de la distribución gaussiana
-""" a_limit = float(input("Ingrese el valor de a: "))
+a_limit = float(input("Ingrese el valor de a: "))
 b_limit = float(input("Ingrese el valor de b: "))
 mu_value = float(input("Ingrese el valor de mu: "))
-sigma_value = float(input("Ingrese el valor de sigma: ")) """
-
-## valdiarte if b is a number or inf
-# if user enter a number, b = b_limit
-# if user enter 'inf', inf = mu_value + 6*sigma_value
-# if user enter '-inf', -inf = mu_value - 6*sigma_value
-a_limit = 20
-b_limit = 'inf'
-mu_value = 23
-sigma_value = 5
+sigma_value = float(input("Ingrese el valor de sigma: ")) 
 
 # validate the value of b_limit
 if b_limit == 'inf':
@@ -29,6 +20,11 @@ elif b_limit == '-inf':
 else:
     b_limit = b_limit    
     print("b_limit con numero: ", b_limit)
+
+""" a_limit = 20
+b_limit = 'inf'
+mu_value = 23
+sigma_value = 5 """
 
 
 # Función para calcular la densidad de probabilidad gaussiana
