@@ -1,0 +1,13 @@
+
+
+MOCKUP CREATION
+División de cada pantalla de forma indiviasual referente a los temas de la aplicacion
+Atencion de 3-5 minutos para no perder la atención de un cliente
+Crear pantallas simples y no tan cargadas de información
+Tener letras estandarizadas como fuente oficial
+
+- usando el mockup se puede saber como estan relacionados los casos de usos
+- el usuario peude seguir las siguientes rutas para llegar a un objetivo:
+    -- ruta con forma z (mas comun)
+    -- ruta con forma de U
+    -- ruta con laterales    
