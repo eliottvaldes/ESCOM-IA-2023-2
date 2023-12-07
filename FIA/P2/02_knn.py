@@ -16,6 +16,10 @@ knn = KNeighborsClassifier(n_neighbors=k)
 # Entrenar el modelo con los datos
 knn.fit(X, y)
 
+# mostrar los datos de entrenamiento
+print("Características:\n", X)
+
+
 # Utiliza los datos del dataset para hacer las pruebas y verificar si pertenece o no a la clase
 for i in range(len(dataset)):
     valores_prueba = dataset.iloc[i, 0:4].values
