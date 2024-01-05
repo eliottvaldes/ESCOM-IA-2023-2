@@ -1,56 +1,89 @@
 % proyecto de PDI
-clc
-warning off all;
+clc, warning off all, close all;
 % obtener la imagen
-rgb = imread("imagenes/letras.png");
-I = im2gray(rgb);
+original = imread("images/img_2.jpg");
+figure(1), subplot(3,3,2), imshow(original), title("Original");
 
-% quitar ruido a la imagen
-p_gray  = wiener2(I);
+% obtenemos escala de grises
+I = im2gray(original);
+%figure;
+%imshow(I);
 
-% creamos un umbral para binarizacion
-umbral = 0.2;
-% binarizamos la imagen
-imagen_binaria = imbinarize(p_gray, umbral);
+% suavizamos el ruido dentro de la imagen
+I= wiener2(I, [5 5]);
 
-% eliminamos regiones menores a 300 pixeles
-imagen_binaria = bwareaopen(imagen_binaria, 500);
-
-% definimos el tipo de erosion a aplciar
-SE = strel("disk", 10);
-imagen_binaria = imclose(imagen_binaria, SE);
-
-% Mostrar la imagen binaria
-imshow(imagen_binaria);
-title('Imagen Binaria');
+I = imbinarize(I);
+subplot(3,3,4), imshow(I), title("Binarizada");
 
 
-% Encontrar y mostrar contornos
-contornos = bwboundaries(imagen_binaria, 8, "noholes");
-hold on;
-for k = 1:length(contornos)
-    borde = contornos{k};
+% seguimos eliminando ruido
+% eliminamos las regiones que tengan menos de 400 px
+I = bwareaopen(I, 200, 4);
+%figure;
+%imshow(I);
 
-    % Calcular el área del contorno
-    area = polyarea(borde(:,2), borde(:,1));
+%SE = strel("diamond", 3);
+% aplicamos erosión de la imagen
+% I= imdilate(I, SE);
+% I = imerode(I, SE);
 
-    if(area > 300)
 
-        % Calcular el perímetro
-        perimetro = sum(sqrt(sum(diff(borde).^2, 2)));
+% rellenamos espacio en objetos
+SE = strel('arbitrary', 10);
+%SE = strel("diamond", 3);
+I = imclose(I, SE);
+subplot(3,3,5), imshow(I), title("Rellenado de espacios con cierre de imagen");
 
-        % Calcular la circularidad
-        circularidad = (4 * pi * area) / perimetro^2;
 
-        % Dibujar los bordes de la imagen
-        plot(borde(:, 2), borde(:, 1), 'r', 'LineWidth', 2);
+% rellenamos espacio en objetos
+SE = strel('disk', 6);
+I = imerode(I, SE);
+subplot(3,3,6) ,imshow(I), title("Con erosion");
 
-        % Mostrar los datos en la imagen
-        texto = sprintf('Circularidad: %.2f\nÁrea: %.2f\nPerímetro: %.2f', ...
-            circularidad, area, perimetro);
-        text(centroide(2), centroide(1), texto, 'Color', 'green', 'FontSize', 18);
+% Rellenar los espacios en blanco en la imagen binaria
+I = imfill(I, "holes");
+figure(2),imshow(I), title("Rellenando espacios en blanco");
 
-    end
 
-end
-hold off;
+
+
+% % usamos contornos exteriores para caracterizar cada objeto
+% [B, L] = bwboundaries(I, 4, "holes");
+%
+% % test
+% figure;
+% imshowpair(original, L, "montage");
+% title("Imagen original y bordes");
+% % end test
+%
+% figure;
+% imshow(label2rgb(L, @jet, [.5 .5 .5]))
+% title("Bordes indetificados");
+%
+% hold on
+% % for k = 1: length(B)    boundary = B(k); % ciclo para dibujar los contornos de las regiones
+% %     plot(boundary(:,2),'w','LineWidth',2)
+% % end
+%
+% % obtenemos la caracterizacion de la imagen
+% stats = regionprops(L, 'Area', 'Centroid');
+% threshold = 0.94;
+% for k =1:length(B)
+%     boundary = B(k);
+%     delta_sq = diff(boundary).^2;
+%     % obtenemos el perimetro
+%     perimeter = sum(sqrt(sum(delta_sq, 2)));
+%     % obtenemos el area
+%     area = stats(k).Area;
+%     % obtenemos la metrica usando el area y perimetro
+%     metric = 4*pi*area/perimeter^2;
+%     % asignamos metrica a cada region
+%     metric_string = sprintf('%2.2f', metric);
+%     if metric > threshold
+%         % obtenemos el centroide
+%         centroid = stats(k).Centroid;
+%         % lo dibujamos en pantalla
+%         plot(centroid(1), centroid(2), 'ko');
+%     end
+%     text(boundary(1,2)-35, boundary(1,1)+13, metric_string, 'Color', 'k', 'FontSize', 20, 'FontWeight', 'bold')
+% end
