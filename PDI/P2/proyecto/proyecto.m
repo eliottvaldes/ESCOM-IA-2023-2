@@ -1,11 +1,19 @@
 % proyecto de PDI
-clc, warning off all, close all;
+clc, clear, warning off all, close all;
+
 % obtener la imagen
-original = imread("images/img_2.jpg");
-figure(1), subplot(3,3,2), imshow(original), title("Original");
+I = imread("images/img_1.jpg");
+figure(1), imshow(I), title("Original");
+
+% Convertir la imagen a tipo de datos de punto flotante de doble precisión
+% y multiplicamos por factor de saturacion
+imagen_saturada = im2double(I) * 1.2;
+% Asegurarse de que los valores estén en el rango [0, 1]
+I = min(max(imagen_saturada, 0), 1);
+figure(), imshow(I), title("Saturada");
 
 % obtenemos escala de grises
-I = im2gray(original);
+I = im2gray(I);
 %figure;
 %imshow(I);
 
@@ -13,7 +21,7 @@ I = im2gray(original);
 I= wiener2(I, [5 5]);
 
 I = imbinarize(I);
-subplot(3,3,4), imshow(I), title("Binarizada");
+figure(), imshow(I), title("Binarizada");
 
 
 % seguimos eliminando ruido
@@ -32,18 +40,13 @@ I = bwareaopen(I, 200, 4);
 SE = strel('arbitrary', 10);
 %SE = strel("diamond", 3);
 I = imclose(I, SE);
-subplot(3,3,5), imshow(I), title("Rellenado de espacios con cierre de imagen");
+figure(), imshow(I), title("Rellenado de espacios con cierre de imagen");
 
 
 % rellenamos espacio en objetos
 SE = strel('disk', 6);
 I = imerode(I, SE);
-subplot(3,3,6) ,imshow(I), title("Con erosion");
-
-% Rellenar los espacios en blanco en la imagen binaria
-I = imfill(I, "holes");
-figure(2),imshow(I), title("Rellenando espacios en blanco");
-
+figure(), imshow(I), title("Con erosion");
 
 
 
