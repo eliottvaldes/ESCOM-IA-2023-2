@@ -6,16 +6,27 @@ I = imread("images/img_1.jpg");
 figure(1), imshow(I), title("Original");
 
 % Convertir la imagen a tipo de datos de punto flotante de doble precisión
-% y multiplicamos por factor de saturacion
-imagen_saturada = im2double(I) * 1.2;
+I = im2double(I);
+
+% resaltamos contornos
+filter_parks = firpm(16, [0 0.1 0.3 1], [0 0 1 1]);
+filter_parks = ftrans2(filter_parks);
+% aplicamos filtro
+I_filtered = filter2(filter_parks, rgb2gray(I));
+figure(), imshow(I_filtered), title("Tratamiendo de bordes");
+% sumamos para resaltar los bordes
+I = I + I_filtered;
+figure(), imshow(I), title("Bordes Resaltados");
+
+% multiplicamos por factor de saturacion
+imagen_saturada = I * 1.1;
 % Asegurarse de que los valores estén en el rango [0, 1]
 I = min(max(imagen_saturada, 0), 1);
 figure(), imshow(I), title("Saturada");
 
 % obtenemos escala de grises
 I = im2gray(I);
-%figure;
-%imshow(I);
+figure(), imshow(I), title("Escala de grises");
 
 % suavizamos el ruido dentro de la imagen
 I= wiener2(I, [5 5]);
